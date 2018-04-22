@@ -33,7 +33,7 @@ import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
-public class GivenTestForMyTaxi {
+public class MyTaxiTest {
 @Rule
     public ActivityTestRule<MainActivity> mActivityRule= new ActivityTestRule<>(MainActivity.class);
     private MainActivity mActivity = null;
@@ -50,7 +50,7 @@ public void setActivity() {
 }
 
     @Test
-    public void testLoginButton() throws Exception{
+    public void testScenario() throws Exception{
         onView(withId(R.id.edt_username)).check(matches(isDisplayed()));
         onView(withId(R.id.edt_username)).perform(typeText(userName));
         onView(withId(R.id.edt_password)).check(matches(isDisplayed()));
